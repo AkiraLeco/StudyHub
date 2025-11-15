@@ -1,0 +1,20 @@
+# Ignorar arquivos de uploads reais
+uploads/*
+
+# Mas manter o arquivo .gitkeep
+!uploads/.gitkeep
+
+# Arquivos temporários do sistema
+*.tmp
+*.log
+*.cache
+
+# Arquivos de configuração sensíveis (se existir)
+config.php
+
+# Arquivos do VS Code
+.vscode/
+
+# Arquivos do Windows
+Thumbs.db
+desktop.ini

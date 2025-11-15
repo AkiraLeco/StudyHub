@@ -45,9 +45,15 @@ O objetivo do projeto é treinar desenvolvimento web com **HTML, CSS, JavaScript
 1. Instale o **XAMPP**  
 2. Copie este projeto para a pasta `htdocs`  
 3. Inicie **Apache** e **MySQL** no painel do XAMPP  
-4. Acesse o **phpMyAdmin** e importe o arquivo do seu banco de dados  
-5. Abra no navegador:
-   `http://localhost/StudyHub/`
+4. Acesse o **phpMyAdmin** e importe o arquivo do banco de dados localizado em:
+   ```
+   /database/studyhub.sql
+   ```
+5. Abra o navegador e acesse:
+   ```
+   http://localhost/StudyHub/
+   ```
+
 
 ---
 

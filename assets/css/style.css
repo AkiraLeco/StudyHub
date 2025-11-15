@@ -1,0 +1,137 @@
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #f7fbff;
+    margin: 0;
+    padding: 0;
+}
+.entrada-container {
+    position: relative;
+    overflow: hidden;
+    min-width: 340px;
+    min-height: 420px; /* aumente a altura mínima do card */
+    /* ...restante do seu CSS... */
+}
+.card-bg-svg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    pointer-events: none;
+    background: url('../img/2addddd3-8aa0-4f88-bea1-1b8548ec78c2.png') center center/cover no-repeat;
+    filter: blur(18px) brightness(1.15) saturate(1.2);
+    opacity: 0.85;
+}
+.entrada-container > *:not(.card-bg-svg) {
+    position: relative;
+    z-index: 1;
+}
+.entrada-container input {
+    width: 92%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: rgba(245, 246, 250, 0.7); /* deixado translúcido */
+    transition: border 0.2s, background 0.2s;
+}
+.entrada-container input:focus {
+    border: 1.5px solid #0984e3;
+    outline: none;
+    background: rgba(245, 246, 250, 0.9); /* um pouco menos transparente ao focar */
+}
+.entrada-container form {
+    margin-top: 3.5rem; /* aumenta o espaçamento acima do campo e botão */
+}
+.bg-animated-svg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    background: url('../img/2addddd3-8aa0-4f88-bea1-1b8548ec78c2.png') center center/cover no-repeat;
+    animation: zoomBg 18s ease-in-out infinite alternate;
+}
+.trocar-btn {
+    background: linear-gradient(90deg, #0984e3 60%, #6c5ce7 100%);
+    color: #fff;
+    border: none;
+    padding: 0.7rem 2.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(9,132,227,0.08);
+    margin-top: 1rem;
+}
+.trocar-btn:hover {
+    background: linear-gradient(90deg, #74b9ff 60%, #a29bfe 100%);
+}
+.site-header {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #e3eaf2;
+    padding: 0.7rem 0 0.5rem 0;
+    box-shadow: 0 2px 12px rgba(116,185,255,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0984e3;
+    margin-left: 2rem;
+    letter-spacing: 1px;
+}
+.site-nav {
+    margin-right: 2rem;
+}
+.site-nav a {
+    color: #636e72;
+    text-decoration: none;
+    margin: 0 0.7rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.site-nav a:hover {
+    color: #0984e3;
+}
+.site-user {
+    margin-right: 2rem;
+    font-size: 1rem;
+    color: #636e72;
+}
+footer {
+    text-align: left;
+    padding: 1.5rem 2rem 0.7rem 1rem;
+    color: #222;
+    font-size: 1rem;
+}
+@keyframes zoomBg {
+    0% {
+        background-size: 100% 100%;
+    }
+    100% {
+        background-size: 110% 110%;
+    }
+}
+@media (max-width: 600px) {
+    .site-title {
+        margin-left: 0.7rem;
+        font-size: 1.1rem;
+    }
+    .site-nav {
+        margin-right: 0.7rem;
+    }
+    .site-user {
+        margin-right: 0.7rem;
+        font-size: 0.95rem;
+    }
+}
